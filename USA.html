@@ -2,13 +2,16 @@
 <html style="font-size: 16px;" lang="en"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="​Building a Legacy of Success">
+    <meta name="keywords" content="​wind energy">
     <meta name="description" content="">
     <title>USA</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
 <link rel="stylesheet" href="USA.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <script src="vendor/d3.v6.min.js"></script>
+    <script src="vendor/d3-dsv@3.js"></script>
+    <script src="run.js"></script>
     <meta name="generator" content="Nicepage 4.21.5, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i|Overlock:400,400i,700,700i,900,900i">
     
@@ -37,7 +40,7 @@
             </div>
             <div class="u-align-center u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-2">
-                <a href="usa.html" class="u-active-white u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-2-light-2 u-radius-26 u-btn-2">Usa</a>
+                <a href="usa.html" class="u-active-white u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-2-light-2 u-radius-26 u-btn-2">USA</a>
               </div>
             </div>
             <div class="u-align-center u-container-style u-list-item u-repeater-item">
@@ -59,6 +62,7 @@
                   <div class="u-container-layout u-container-layout-1">
                     <h2 class="u-align-center u-text u-text-1">Overview of wind energy in USA<br>2000-2021
                     </h2>
+                    <div id="canvas"></div>
                   </div>
                 </div>
               </div>
