@@ -212,7 +212,7 @@ window.onload = () => {
             })
     }
 
-    d3.csv("piechart.csv", (d) => {
+    d3.csv("US_data.csv", (d) => {
         return {
             name: d.source,
             value: parseFloat(d.energy),
