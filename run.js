@@ -4,7 +4,7 @@ async function process(data) {
     async function chart() {
         console.log(data);
         let barSize = 30;
-        let margin = ({top: 20, right: 150, bottom: 6, left: 150});
+        let margin = ({top: 20, right: 150, bottom: 0, left: 150});
         let n = 20;
         let height = margin.top + barSize * n + margin.bottom;
         let width = 1200;
