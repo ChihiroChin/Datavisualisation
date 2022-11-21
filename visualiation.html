@@ -2,17 +2,19 @@
 <html style="font-size: 16px;" lang="en"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="​wind energy">
     <meta name="description" content="">
-    <title>European</title>
+    <title>Vitualisation</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="European.css" media="screen">
+<link rel="stylesheet" href="USA.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <script src="vendor/d3.v6.min.js"></script>
     <script src="vendor/d3-dsv@3.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
     <script src="run.js"></script>
     <script src="piechart.js"></script>
+    <script src="piechart_us.js"></script>
     <meta name="generator" content="Nicepage 4.21.5, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i|Overlock:400,400i,700,700i,900,900i">
     
@@ -24,53 +26,55 @@
 		"name": "Wind Energy Project"
 }</script>
     <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="European">
+    <meta property="og:title" content="USA">
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
   </head>
   <body class="u-body u-xl-mode" data-lang="en">
-    <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="624" data-image-height="424" id="sec-9b58">
+    <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="624" data-image-height="424" id="sec-8e2f">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-text u-title u-text-1"> Wind Energy Consumption In Western Countries</h1>
-        <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
+        <div class="u-list u-list-1">
           <div class="u-repeater u-repeater-1">
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-1">
-                <a href="Introduction.html" class="u-active-white u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-2-light-2 u-radius-26 u-btn-1">Introduction</a>
+                <a href="Introduction.html" class="u-active-white u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-2-light-2 u-radius-26 u-btn-1">INTRODUCTION</a>
               </div>
             </div>
             <div class="u-align-center u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-2">
-                <a href="usa.html" class="u-active-white u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-2-light-2 u-radius-26 u-btn-2">Usa</a>
               </div>
             </div>
-            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+		  <div class="u-align-center u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-3">
-                <a href="european.html" class="u-active-white u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-2-light-2 u-radius-26 u-btn-3">european</a>
+                <a href="visualiation.html" class="u-active-white u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-2-light-2 u-radius-26 u-btn-3">VITUALISATION</a>
+              </div>
+            
+            </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="u-clearfix u-valign-middle u-section-2" id="sec-a7fe">
+    <section class="u-clearfix u-valign-middle u-section-2" id="sec-9e4b">
       <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
                 <div class="u-container-style u-layout-cell u-left-cell u-palette-2-light-3 u-right-cell u-size-60 u-layout-cell-1">
                   <div class="u-container-layout u-container-layout-1">
                     <h2 class="u-align-center u-text u-text-1">Overview of wind energy in Europe<br>2000-2021
                     </h2>
                     <div id="canvas"></div>
-                    <h2 class="u-align-center u-text u-text-1">UK Renewable energy from 2018 to 2020</h2><br>
-                    <h4>Based on the Pie Chart below, we can get to view clearly on the renewable energy from 2018 - 2020. </h4>
-                      <div id="piechart-uk-input"></div>
-                      <div class="mx-auto" id="piechart-uk"></div>
-                      
-                  </div>
-        </div>
+                     <h2 class="u-align-center u-text u-text-1">USA energy from 2018 to 2020</h2><br>
+                                        <h4>Based on the Pie Chart below, we can get to view clearly on the renewable energy from 2018 - 2020 in the USA. </h4>
+                    <div id="piechart-us-input"></div>
+                      <div class="mx-auto" id="piechart-us"></div>
+                    <h2 class="u-align-center u-text u-text-1">US wind energy investment by country</h2><br>
+                    <div class="choropleth" id="choropleth"   ></div> 
+                    <div id="choroplethUS"></div>
+                   
       </div>
     </section>
-    
-    
+    </body>
     <footer class="u-clearfix u-footer u-grey-80" id="sec-fc3c"><div class="u-clearfix u-sheet u-sheet-1">
         <h4 class="u-align-center u-text u-text-1">
           <span style="font-size: 1.875rem;">Group 2</span>
@@ -81,5 +85,4 @@
         <div class="u-border-1 u-border-white u-expanded-width u-line u-line-horizontal u-opacity u-opacity-50 u-line-1"></div>
         <p class="u-align-center u-text u-text-3">COS30045 DATA VISUALIZATION PROJECT</p>
       </div></footer>
-  
-</body></html>
+  </html>
